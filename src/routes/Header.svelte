@@ -1,4 +1,6 @@
 <script lang="ts">
+	import * as Avatar from '$lib/components/ui/avatar';
+	import { MenuIcon } from 'svelte-feather-icons';
 	const links = [
 		{
 			label: 'Workout',
@@ -20,12 +22,32 @@
 				<span class="font-bold inline-block text-[15px] lg:text-base"> 🏋️ Sets & Reps </span>
 			</a>
 		</div>
-		<nav class="flex items-center space-x-6 text-sm font-medium">
+		<nav class="hidden sm:flex items-center space-x-6 text-sm font-medium">
 			{#each links as link}
 				<a href={link.href} class="transition-colors hover:text-foreground/80 text-foreground/60">
 					{link.label}
 				</a>
 			{/each}
 		</nav>
+		<div class="flex flex-1 items-center space-x-2 sm:space-x-4 justify-end">
+			<nav class="items-center gap-5 flex">
+				<div class="hidden sm:flex items-center gap-5">
+					<a href="https://www.buymeacoffee.com/jeremyfisher" target="_blank"
+						><img
+							src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+							alt="Buy Me A Coffee"
+							style="height: 35px !important;width: 120px !important;"
+						/></a
+					>
+					<Avatar.Root>
+						<Avatar.Image src="https://github.com/shadcn.png" alt="@shadcn" />
+						<Avatar.Fallback>CN</Avatar.Fallback>
+					</Avatar.Root>
+				</div>
+				<div class="flex sm:hidden">
+					<MenuIcon size="18" />
+				</div>
+			</nav>
+		</div>
 	</div>
 </header>

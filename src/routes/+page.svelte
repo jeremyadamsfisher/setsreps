@@ -9,13 +9,11 @@
 	<meta name="description" content="Sets and Reps" />
 </svelte:head>
 
-<section>
-	<div class="flex flex-col gap-5 bg-blue">
-		<TimerBar />
-		<div class="flex flex-wrap gap-5 align-stretch">
-			<Exercise />
-			<Exercise />
-			<NewExerciseButton />
-		</div>
+<div class="flex flex-col h-full justify-between">
+	<div class="flex flex-wrap gap-5 align-stretch">
+		<Exercise />
+		<Exercise />
+		<NewExerciseButton />
 	</div>
-</section>
+	<TimerBar />
+</div>

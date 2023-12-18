@@ -14,7 +14,115 @@
 	let docRef = doc(db, 'session', sessionId, 'exercises', exerciseId);
 	let exerciseDoc = docStore(db, docRef);
 
-	const exercises = ['Bench Press', 'Overhead Press'];
+	const options = [
+		{
+			name: 'Squat',
+			variations: [
+				'Barbell Squat',
+				'Dumbbell Squat',
+				'Front Squat',
+				'Box Squat',
+				'Hack Squat',
+				'Goblet Squat',
+				'Sumo Squat',
+				'Pistol Squat'
+			]
+		},
+		{
+			name: 'Deadlift',
+			variations: [
+				'Conventional Deadlift',
+				'Romanian Deadlift',
+				'Sumo Deadlift',
+				'Trap Bar Deadlift',
+				'Rack Pull',
+				'Stiff-Legged Deadlift'
+			]
+		},
+		{
+			name: 'Bench Press',
+			variations: [
+				'Barbell Bench Press',
+				'Dumbbell Bench Press',
+				'Incline Bench Press',
+				'Decline Bench Press',
+				'Close-Grip Bench Press',
+				'Floor Press'
+			]
+		},
+		{
+			name: 'Overhead Press',
+			variations: [
+				'Barbell Overhead Press',
+				'Dumbbell Overhead Press',
+				'Seated Overhead Press',
+				'Arnold Press',
+				'Push Press',
+				'Military Press'
+			]
+		},
+		{
+			name: 'Row',
+			variations: [
+				'Barbell Row',
+				'Dumbbell Row',
+				'Seated Cable Row',
+				'T-Bar Row',
+				'Inverted Row',
+				'Face Pull'
+			]
+		},
+		{
+			name: 'Pull-Up',
+			variations: [
+				'Assisted Pull-Up',
+				'Negative Pull-Up',
+				'Chin-Up',
+				'Wide-Grip Pull-Up',
+				'Neutral-Grip Pull-Up',
+				'Archer Pull-Up'
+			]
+		},
+		{
+			name: 'Push-Up',
+			variations: [
+				'Incline Push-Up',
+				'Decline Push-Up',
+				'Diamond Push-Up',
+				'Wide-Grip Push-Up',
+				'Narrow-Grip Push-Up',
+				'Pike Push-Up'
+			]
+		},
+		{
+			name: 'Lunge',
+			variations: [
+				'Walking Lunge',
+				'Reverse Lunge',
+				'Box Lunge',
+				'Weighted Lunge',
+				'Bulgarian Split Squat',
+				'Step-Up'
+			]
+		},
+		{
+			name: 'Dips',
+			variations: ['Parallel Bar Dips', 'Weighted Dips', 'Triceps Dips', 'Box Dips', 'Machine Dips']
+		},
+		{
+			name: 'Bicep Curl',
+			variations: [
+				'Barbell Bicep Curl',
+				'Dumbbell Bicep Curl',
+				'Hammer Curl',
+				'Concentration Curl',
+				'Preacher Curl',
+				'Spider Curl'
+			]
+		}
+	];
+
+	const exercises = options.reduce((acc, curr) => [...acc, ...curr.variations], []);
 
 	let open = false;
 	// We want to refocus the trigger button when the user selects
