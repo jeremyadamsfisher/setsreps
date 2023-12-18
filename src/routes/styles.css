@@ -105,3 +105,10 @@ button:focus:not(:focus-visible) {
 	width: 1px;
 	white-space: nowrap;
 }
+
+/* https://benborgers.com/posts/tailwind-h-screen */
+@supports (-webkit-touch-callout: none) {
+	.h-screen {
+		height: -webkit-fill-available;
+	}
+}

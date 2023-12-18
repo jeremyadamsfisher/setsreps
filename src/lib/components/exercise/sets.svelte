@@ -6,8 +6,6 @@
 	import { collection } from 'firebase/firestore';
 	import { Input } from '$lib/components/ui/input';
 	import { setDoc, doc } from 'firebase/firestore';
-	import { TrashIcon } from 'svelte-feather-icons';
-	import { Button } from '$lib/components/ui/button';
 
 	const sessionId = 'tIwtAZxRgO0GSVfPQHAw';
 	const exerciseId = 'CNi8DSuCrUiKYMqUuApO';
@@ -34,7 +32,6 @@
 				<Table.Head>Weight</Table.Head>
 				<Table.Head>Reps</Table.Head>
 				<Table.Head>Status</Table.Head>
-				<Table.Head></Table.Head>
 			</Table.Row>
 		</Table.Header>
 		<Table.Body>
@@ -42,7 +39,7 @@
 				<Table.Row>
 					<Table.Cell>
 						<Input
-							type="text"
+							type="number"
 							value={row.weight}
 							on:keyup={(e) => {
 								//@ts-ignore
@@ -52,7 +49,7 @@
 					</Table.Cell>
 					<Table.Cell>
 						<Input
-							type="text"
+							type="number"
 							value={row.reps}
 							on:keyup={(e) => {
 								//@ts-ignore
@@ -62,11 +59,6 @@
 					</Table.Cell>
 					<Table.Cell>
 						<StatusSelect />
-					</Table.Cell>
-					<Table.Cell>
-						<Button variant="ghost">
-							<TrashIcon size="18" />
-						</Button>
 					</Table.Cell>
 				</Table.Row>
 			{/each}

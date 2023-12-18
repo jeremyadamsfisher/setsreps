@@ -2,9 +2,10 @@
 	import * as Select from '$lib/components/ui/select';
 
 	const statuses = [
+		{ value: 'pending', label: 'Pending' },
 		{ value: 'completed', label: 'Completed' },
 		{ value: 'failed', label: 'Failed' },
-		{ value: 'pending', label: 'Pending' }
+		{ value: 'remove', label: 'Remove' }
 	];
 
 	function onClick(newStatus: string) {

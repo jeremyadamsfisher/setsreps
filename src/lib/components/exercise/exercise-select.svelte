@@ -158,7 +158,7 @@
 			<Command.Input placeholder="Search exercises..." />
 			<Command.Empty>No exercise found.</Command.Empty>
 			<Command.Group>
-				{#each exercises as exercise}
+				{#each exercises.slice(0) as exercise}
 					<Command.Item
 						value={exercise}
 						onSelect={(currentValue) => {
