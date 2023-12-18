@@ -34,7 +34,7 @@
 				<Table.Head>Weight</Table.Head>
 				<Table.Head>Reps</Table.Head>
 				<Table.Head>Status</Table.Head>
-				<Table.Head>Actions</Table.Head>
+				<Table.Head></Table.Head>
 			</Table.Row>
 		</Table.Header>
 		<Table.Body>

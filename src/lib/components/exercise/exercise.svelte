@@ -5,7 +5,7 @@
 	import * as Card from '$lib/components/ui/card';
 </script>
 
-<Card.Root class="flex-1 p-5 flex flex-col gap-5">
+<Card.Root class="flex-1 sm:p-5 p-2 flex flex-col sm:gap-5 gap-2">
 	<ExerciseSelect />
 	<Sets />
 	<ActionBar />
