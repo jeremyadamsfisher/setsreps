@@ -2,6 +2,7 @@
 	import Exercise from '../lib/components/exercise/exercise.svelte';
 	import TimerBar from '../lib/components/timer-bar/timer-bar.svelte';
 	import NewExerciseButton from '../lib/components/new-exercise-button.svelte';
+	import Button from '$lib/components/ui/button/button.svelte';
 </script>
 
 <svelte:head>
@@ -14,6 +15,7 @@
 		<Exercise />
 		<Exercise />
 		<NewExerciseButton />
+		<Button>Complete workout</Button>
 	</div>
 	<TimerBar />
 </div>

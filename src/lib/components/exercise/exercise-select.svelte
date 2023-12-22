@@ -11,6 +11,7 @@
 
 	const sessionId = 'tIwtAZxRgO0GSVfPQHAw';
 	const exerciseId = 'CNi8DSuCrUiKYMqUuApO';
+
 	let docRef = doc(db, 'session', sessionId, 'exercises', exerciseId);
 	let exerciseDoc = docStore(db, docRef);
 
