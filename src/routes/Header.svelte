@@ -3,6 +3,7 @@
 	import { MenuIcon } from 'svelte-feather-icons';
 	import { auth } from '$lib/firebase';
 	import { userStore } from 'sveltefire';
+	import { page } from "$app/stores"; 
 
 	const user = userStore(auth);
 
@@ -30,9 +31,15 @@
 		{#if $user}
 			<nav class="hidden sm:flex items-center space-x-6 text-sm font-medium">
 				{#each links as link}
-					<a href={link.href} class="transition-colors hover:text-foreground/80 text-foreground/60">
-						{link.label}
-					</a>
+					{#if $page.url.href.includes(link.href)}		
+						<a href={link.href} class="transition-colors hover:text-foreground/80 white">
+							{link.label}
+						</a>
+					{:else}
+						<a href={link.href} class="transition-colors hover:text-foreground/80 text-foreground/60">
+							{link.label}
+						</a>
+					{/if}
 				{/each}
 			</nav>
 			<div class="flex flex-1 items-center space-x-2 sm:space-x-4 justify-end">
