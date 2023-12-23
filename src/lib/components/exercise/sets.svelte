@@ -7,7 +7,7 @@
 	import { Input } from '$lib/components/ui/input';
 	import { setDoc, doc, query, orderBy } from 'firebase/firestore';
 
-	const sessionId = 'tIwtAZxRgO0GSVfPQHAw';
+	export let sessionId: string;
 	const exerciseId = 'CNi8DSuCrUiKYMqUuApO';
 
 	let setCollection = collection(db, 'session', sessionId, 'exercises', exerciseId, 'set');
@@ -52,7 +52,7 @@
 						<Input type="number" value={row.reps} on:input={(e) => updateSet(row.id, 'reps', e)} />
 					</Table.Cell>
 					<Table.Cell>
-						<StatusSelect setId={row.id} />
+						<StatusSelect {sessionId} setId={row.id} />
 					</Table.Cell>
 				</Table.Row>
 			{/each}

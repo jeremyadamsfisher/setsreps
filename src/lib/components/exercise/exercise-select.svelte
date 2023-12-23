@@ -9,7 +9,7 @@
 	import { db } from '$lib/firebase';
 	import { doc, setDoc } from 'firebase/firestore';
 
-	const sessionId = 'tIwtAZxRgO0GSVfPQHAw';
+	export let sessionId: string;
 	const exerciseId = 'CNi8DSuCrUiKYMqUuApO';
 
 	let docRef = doc(db, 'session', sessionId, 'exercises', exerciseId);

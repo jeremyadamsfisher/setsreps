@@ -5,7 +5,7 @@
 	import { collection, doc } from 'firebase/firestore';
 	import { addDoc, serverTimestamp, deleteDoc } from 'firebase/firestore';
 
-	const sessionId = 'tIwtAZxRgO0GSVfPQHAw';
+	export let sessionId: string;
 	const exerciseId = 'CNi8DSuCrUiKYMqUuApO';
 
 	let exerciseDoc = doc(db, 'session', sessionId, 'exercises', exerciseId);
